@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="818.0" style="-fx-background-color: #00001a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkingspot.Signin_pageController">
+   <children>
+      <AnchorPane layoutX="412.0" layoutY="99.0" prefHeight="460.0" prefWidth="371.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXTextField id="email_phn_id" layoutX="63.0" layoutY="125.0" prefHeight="43.0" prefWidth="257.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <JFXTextField id="password_id" layoutX="63.0" layoutY="237.0" prefHeight="43.0" prefWidth="257.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <Text layoutX="63.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email/phone">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="63.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="password">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Button id="signin_id" ellipsisString="" layoutX="63.0" layoutY="330.0" mnemonicParsing="false" onAction="#ChnageWindowMainpage" prefHeight="31.0" prefWidth="257.0" style="-fx-background-color: #00001a; -fx-background-radius: 5;" text="Signin" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <effect>
+                  <ColorAdjust>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </ColorAdjust>
+               </effect>
+            </Button>
+            <Text id="for_pass_id" accessibleRole="BUTTON" fill="#050522" fontSmoothingType="LCD" layoutX="120.0" layoutY="413.0" stroke="#da0c0c" strokeType="OUTSIDE" strokeWidth="0.0" text="Forget password" textAlignment="CENTER" underline="true" wrappingWidth="143.6708984375">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fill="#070325" layoutX="17.0" layoutY="43.0" stroke="#0e0e40" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00001a;" text="Sign in" textAlignment="CENTER" wrappingWidth="336.6708984375">
+               <font>
+                  <Font name="Bell MT Bold" size="34.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="25.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PARKING SPOT" translateY="150.0" wrappingWidth="363.01416015625">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="45.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <Text fill="WHITE" layoutX="53.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DON'T HAVE ACCOUNT">
+         <effect>
+            <Glow />
+         </effect>
+      </Text>
+      <Button layoutX="53.0" layoutY="420.0" mnemonicParsing="false" onAction="#ChnageWindowSignup" prefHeight="31.0" prefWidth="257.0" text="SignUp" textFill="#180840">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
